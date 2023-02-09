@@ -1,7 +1,9 @@
 package Storage.Entity;
 
-import java.util.List;
+import jakarta.persistence.Entity;
 
+import java.util.List;
+@Entity
 public class Persona extends Utente {
 
     private String cognome;
@@ -19,6 +21,10 @@ public class Persona extends Utente {
         this.posizioneDesiderata = posizioneDesiderata;
         this.curriculum = curriculum;
         this.candidature = candidature;
+    }
+
+    public Persona() {
+
     }
 
     public String getCognome() {
