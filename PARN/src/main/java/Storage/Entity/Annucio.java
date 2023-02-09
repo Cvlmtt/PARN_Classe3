@@ -1,5 +1,4 @@
 package Storage.Entity;
 
-public class Sede {
-
+public class Annucio {
 }
