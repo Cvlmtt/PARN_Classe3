@@ -1,7 +1,6 @@
 package Storage.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -10,15 +9,23 @@ import java.util.List;
 public class Annuncio {
 
     private String ruolo;
+    @OneToOne
     private Sede sede;
     private int numeroPersone;
     private String descrizione;
     private LocalDateTime dataScadenza;
+    @ElementCollection
     private List<String> requisiti;
+    @ElementCollection
+
     private List<String> preferenze;
+    @ElementCollection
+
     private List<String> keyword;
     private String stato;
+    @OneToMany
     private List<Candidatura> candidature;
+    @OneToOne
     private Azienda azienda;
     private Long id;
 

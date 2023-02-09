@@ -2,13 +2,18 @@ package Storage.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 import java.time.LocalDateTime;
 
 @Entity
 public class Candidatura {
+    @OneToOne
     private Persona persona;
+    @OneToOne
     private Annuncio annuncio;
+    @OneToOne
     private Curriculum curriculum;
     private LocalDateTime data;
     private Long id;
