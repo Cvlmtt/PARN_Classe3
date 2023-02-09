@@ -1,5 +1,6 @@
 package Storage.Entity;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -15,6 +16,7 @@ public class EsperienzaLavorativa {
     private String tipoAzienda;
     private String datore;
     private String tipoImpiego;
+    @ElementCollection
     private List<String> mansioniPrincipale;
     private Long id;
 
