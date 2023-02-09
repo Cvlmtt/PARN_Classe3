@@ -1,8 +1,12 @@
 package Storage.Entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
 public class EsperienzaLavorativa {
 
     private LocalDateTime dataInizio;
@@ -12,6 +16,7 @@ public class EsperienzaLavorativa {
     private String datore;
     private String tipoImpiego;
     private List<String> mansioniPrincipale;
+    private Long id;
 
     public EsperienzaLavorativa() {
     }
@@ -80,5 +85,14 @@ public class EsperienzaLavorativa {
 
     public void setMansioniPrincipale(List<String> mansioniPrincipale) {
         this.mansioniPrincipale = mansioniPrincipale;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
     }
 }

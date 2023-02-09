@@ -1,5 +1,9 @@
 package Storage.Entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public abstract class Utente {
     private String nome;
     private String mail;
@@ -11,6 +15,7 @@ public abstract class Utente {
     private String via;
     private Long telefono;
     private String foto;
+    private Long id;
 
     public Utente(String nome, String mail, String password, String regione, String provincia, int cap, String citta, String via, Long telefono, String foto) {
         this.nome = nome;
@@ -23,6 +28,10 @@ public abstract class Utente {
         this.via = via;
         this.telefono = telefono;
         this.foto = foto;
+    }
+
+    public Utente() {
+
     }
 
     public String getNome() {
@@ -103,5 +112,14 @@ public abstract class Utente {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
     }
 }
