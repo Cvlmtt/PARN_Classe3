@@ -1,17 +1,20 @@
 package Storage.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.List;
 
 @Entity
 public class Curriculum {
-
+    @ElementCollection
     private List<String> softSkill;
+    @OneToMany
     private List<EsperienzaLavorativa> esperienze;
+    @OneToMany
     private List<Lingua> lingue;
+    @OneToMany
     private List<Istruzione> istruzioni;
+    @OneToOne
     private Persona persona;
     private Long id;
 

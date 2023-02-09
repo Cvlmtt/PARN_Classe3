@@ -1,6 +1,8 @@
 package Storage.Entity;
 
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
@@ -11,8 +13,11 @@ public class Azienda extends Utente{
     private String link;
     private String areaInteresse;
     private int numeroDipendenti;
+    @ElementCollection
     private List<String> settoriCompetenza;
+    @OneToMany
     private List<Sede> sedi;
+    @OneToMany
     private List<Annuncio> annunci;
 
 
