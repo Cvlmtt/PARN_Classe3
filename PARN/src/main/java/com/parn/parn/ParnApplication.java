@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ParnApplication {
     public static void main(String[] args) {
         SpringApplication.run(ParnApplication.class, args);
+        //Start the application
     }
 
 }
