@@ -1,6 +1,8 @@
 package Storage.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 import java.util.List;
 @Entity
@@ -10,7 +12,9 @@ public class Persona extends Utente {
     private String codiceFiscale;
     private String filtroMacroarea;
     private String posizioneDesiderata;
+    @OneToOne
     private Curriculum curriculum;
+    @OneToMany
     private List<Candidatura> candidature;
 
     public Persona(String nome, String mail, String password, String regione, String provincia, int cap, String citta, String via, Long telefono, String foto, String cognome, String codiceFiscale, String filtroMacroarea, String posizioneDesiderata, Curriculum curriculum, List<Candidatura> candidature) {
