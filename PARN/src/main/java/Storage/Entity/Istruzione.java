@@ -1,8 +1,12 @@
 package Storage.Entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
 public class Istruzione {
 
         private LocalDateTime dataInizio;
@@ -10,6 +14,7 @@ public class Istruzione {
         private String qualifica;
         private String tipoIstruzione;
         private String nomeIstituto;
+        private Long id;
 
         public Istruzione() {
         }
@@ -60,5 +65,14 @@ public class Istruzione {
 
         public void setNomeIstituto(String nomeIstituto) {
                 this.nomeIstituto = nomeIstituto;
+        }
+
+        public void setId(Long id) {
+                this.id = id;
+        }
+
+        @Id
+        public Long getId() {
+                return id;
         }
 }

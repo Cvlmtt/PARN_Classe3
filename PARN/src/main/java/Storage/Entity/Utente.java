@@ -1,18 +1,23 @@
 package Storage.Entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public abstract class Utente {
     private String nome;
     private String mail;
     private String password;
     private String regione;
     private String provincia;
-    private int cap;
+    private String cap;
     private String citta;
     private String via;
-    private Long telefono;
+    private String telefono;
     private String foto;
+    private Long id;
 
-    public Utente(String nome, String mail, String password, String regione, String provincia, int cap, String citta, String via, Long telefono, String foto) {
+    public Utente(String nome, String mail, String password, String regione, String provincia, String cap, String citta, String via, String telefono, String foto) {
         this.nome = nome;
         this.mail = mail;
         this.password = password;
@@ -23,6 +28,10 @@ public abstract class Utente {
         this.via = via;
         this.telefono = telefono;
         this.foto = foto;
+    }
+
+    public Utente() {
+
     }
 
     public String getNome() {
@@ -65,11 +74,11 @@ public abstract class Utente {
         this.provincia = provincia;
     }
 
-    public int getCap() {
+    public String getCap() {
         return cap;
     }
 
-    public void setCap(int cap) {
+    public void setCap(String cap) {
         this.cap = cap;
     }
 
@@ -89,11 +98,11 @@ public abstract class Utente {
         this.via = via;
     }
 
-    public Long getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(Long telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -103,5 +112,14 @@ public abstract class Utente {
 
     public void setFoto(String foto) {
         this.foto = foto;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    @Id
+    public Long getId() {
+        return id;
     }
 }
