@@ -21,7 +21,7 @@ public class Azienda extends Utente{
     private List<Annuncio> annunci;
 
 
-    public Azienda(String nome, String mail, String password, String regione, String provincia, int cap, String citta, String via, Long telefono, String foto, String partitaIVA, String ragioneSociale, String link, String areaInteresse, int numeroDipendenti, List<String> settoriCompetenza, List<Sede> sedi, List<Annuncio> annunci) {
+    public Azienda(String nome, String mail, String password, String regione, String provincia, String cap, String citta, String via, String telefono, String foto, String partitaIVA, String ragioneSociale, String link, String areaInteresse, int numeroDipendenti, List<String> settoriCompetenza, List<Sede> sedi, List<Annuncio> annunci) {
         super(nome, mail, password, regione, provincia, cap, citta, via, telefono, foto);
         this.partitaIVA = partitaIVA;
         this.ragioneSociale = ragioneSociale;

@@ -9,13 +9,13 @@ public class Sede {
     private String regione;
     private String provincia;
     private String citta;
-    private int cap;
+    private String cap;
     private String via;
     private long telefono;
     private String mail;
     private Long id;
 
-    public Sede(String regione, String provincia, String citta, int cap, String via, long telefono, String mail) {
+    public Sede(String regione, String provincia, String citta, String cap, String via, long telefono, String mail) {
         this.regione = regione;
         this.provincia = provincia;
         this.citta = citta;
@@ -53,11 +53,11 @@ public class Sede {
         this.citta = citta;
     }
 
-    public int getCap() {
+    public String getCap() {
         return cap;
     }
 
-    public void setCap(int cap) {
+    public void setCap(String cap) {
         this.cap = cap;
     }
 
